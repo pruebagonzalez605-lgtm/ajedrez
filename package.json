@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "echo 'Static site - no build needed'",
+    "output-directory": "."
   },
   "keywords": ["game", "rock", "paper", "scissors"],
   "author": "",
