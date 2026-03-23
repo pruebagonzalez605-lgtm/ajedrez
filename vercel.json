@@ -2,11 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
+      "src": "api/auth/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "**",
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    {
+      "src": "/api/auth/kick",
+      "dest": "/api/auth/kick.js"
+    },
+    {
+      "src": "/api/auth/callback",
+      "dest": "/api/auth/callback.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
