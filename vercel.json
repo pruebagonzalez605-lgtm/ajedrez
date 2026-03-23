@@ -16,6 +16,18 @@
   ],
   "routes": [
     {
+      "src": "/config.js",
+      "dest": "/config.js"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ajedrez.html",
+      "dest": "/ajedrez.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
