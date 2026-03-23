@@ -1,3 +1,5 @@
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 const OAUTH_CONFIG = {
     client_id: process.env.KICK_CLIENT_ID || process.env.CLIENT_ID || '',
     client_secret: process.env.KICK_CLIENT_SECRET || process.env.CLIENT_SECRET || '',
@@ -26,7 +28,7 @@ module.exports = async (req, res) => {
         return res.status(400).send('Invalid state - missing code verifier');
     }
 
-    const redirectUri = process.env.KICK_REDIRECT_URI || `https://${req.headers.host}/api/auth/callback`;
+    const redirectUri = process.env.KICK_REDIRECT_URI || `https://ajedrez-weld.vercel.app/api/auth/callback`;
 
     try {
         const params = new URLSearchParams({

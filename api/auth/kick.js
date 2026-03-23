@@ -22,7 +22,7 @@ module.exports = (req, res) => {
     // Store code_verifier for callback (in production, use Redis or similar)
     // For now, we'll encode it in the state or store in a simple way
     
-    const redirectUri = process.env.KICK_REDIRECT_URI || `https://${req.headers.host}/api/auth/callback`;
+    const redirectUri = process.env.KICK_REDIRECT_URI || `https://ajedrez-weld.vercel.app/api/auth/callback`;
     const params = new URLSearchParams({
         response_type: 'code',
         client_id: OAUTH_CONFIG.client_id,
