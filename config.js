@@ -2,4 +2,4 @@
 // Set backendUrl to your deployed Node server, e.g. "https://your-backend.onrender.com"
 // Leave empty to use same-origin (local dev)
 window.APP_CONFIG = window.APP_CONFIG || {};
-window.APP_CONFIG.backendUrl = '';
+window.APP_CONFIG.backendUrl = 'https://ajedrez-backend-7tdh.onrender.com';
