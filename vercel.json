@@ -1,4 +1,7 @@
 {
+  "build": {
+    "output": "."
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
