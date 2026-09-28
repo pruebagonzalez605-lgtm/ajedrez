@@ -1,23 +1,33 @@
 {
-  "name": "rock-paper-scissors-multiplayer",
+  "name": "enroque-chess",
   "version": "1.0.0",
-  "description": "Multiplayer Rock Paper Scissors Best of 3 Game",
+  "description": "Ajedrez 3D WebGL y multijugador en tiempo real",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'Static site - no build needed'",
-    "output-directory": "."
+    "prestart": "npm run build",
+    "dev": "npm run build && node server.js",
+    "build": "node build.js",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "playwright test"
   },
-  "keywords": ["game", "rock", "paper", "scissors"],
+  "keywords": [
+    "chess",
+    "webgl",
+    "multiplayer"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chess.js": "^1.4.0",
     "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
     "socket.io": "^4.5.4",
-    "node-fetch": "^2.6.7"
+    "socket.io-client": "^4.8.4",
+    "three": "^0.186.1"
   },
   "devDependencies": {
-    "@vercel/node": "^3.0.0"
+    "@playwright/test": "^1.63.0",
+    "esbuild": "^0.28.2"
   }
 }
